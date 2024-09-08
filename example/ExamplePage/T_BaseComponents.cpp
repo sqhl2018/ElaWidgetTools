@@ -19,8 +19,11 @@
 T_BaseComponents::T_BaseComponents(QWidget* parent)
     : T_BasePage(parent)
 {
+    // 预览窗口标题
+    setWindowTitle("ElaBaseComponents");
+
     // 顶部元素
-    QVBoxLayout* topLayout = createTopLayout("一些常用的基础组件被放置于此，可在此界面体验其效果并按需添加进项目中");
+    createCustomWidget("一些常用的基础组件被放置于此，可在此界面体验其效果并按需添加进项目中");
 
     _toggleSwitch = new ElaToggleSwitch(this);
     ElaScrollPageArea* toggleSwitchArea = new ElaScrollPageArea(this);
@@ -213,8 +216,6 @@ T_BaseComponents::T_BaseComponents(QWidget* parent)
     QWidget* centralWidget = new QWidget(this);
     centralWidget->setWindowTitle("ElaBaseComponents");
     QVBoxLayout* centerLayout = new QVBoxLayout(centralWidget);
-    centerLayout->addLayout(topLayout);
-    centerLayout->addSpacing(5);
     centerLayout->addWidget(toggleSwitchArea);
     centerLayout->addWidget(toggleButtonArea);
     centerLayout->addWidget(comboBoxArea);
