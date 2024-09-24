@@ -293,18 +293,6 @@ bool ElaContentDialog::nativeEvent(const QByteArray& eventType, void* message, l
             clientRect->top -= 1;
             clientRect->bottom -= 1;
         }
-        else
-        {
-            const LRESULT hitTestResult = ::DefWindowProcW(hwnd, WM_NCCALCSIZE, wParam, lParam);
-            if ((hitTestResult != HTERROR) && (hitTestResult != HTNOWHERE))
-            {
-                *result = static_cast<long>(hitTestResult);
-                return true;
-            }
-            // qDebug() << clientRect->left << clientRect->top << clientRect->bottom << clientRect->right;
-            clientRect->top = 0;
-            clientRect->left = 0;
-        }
         *result = WVR_REDRAW;
         return true;
 #endif
