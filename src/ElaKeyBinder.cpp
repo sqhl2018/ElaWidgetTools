@@ -33,8 +33,7 @@ ElaKeyBinder::ElaKeyBinder(QWidget* parent)
     connect(d->_binderDialog, &ElaContentDialog::rightButtonClicked, this, [=]() {
         d->_binderContainer->saveBinderChanged();
     });
-
-    d->_themeMode = eTheme->getThemeMode();
+    d->onThemeChanged(eTheme->getThemeMode());
     connect(eTheme, &ElaTheme::themeModeChanged, d, &ElaKeyBinderPrivate::onThemeChanged);
 }
 
@@ -45,7 +44,8 @@ ElaKeyBinder::~ElaKeyBinder()
 void ElaKeyBinder::setBinderKeyText(QString binderKeyText)
 {
     Q_D(ElaKeyBinder);
-    d->_binderContainer->setBinderKeyText(std::move(binderKeyText));
+    d->_binderContainer->setBinderKeyText(binderKeyText);
+    setText(u8"  按键: " + binderKeyText + "      ");
 }
 
 QString ElaKeyBinder::getBinderKeyText() const
