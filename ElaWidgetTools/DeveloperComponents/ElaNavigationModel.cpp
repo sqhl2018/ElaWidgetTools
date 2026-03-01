@@ -336,10 +336,11 @@ QStringList ElaNavigationModel::removeNavigationNode(const QString& nodeKey)
     {
         removeKeyList.append(node->getNodeKey());
     }
+    _nodesMap.remove(node->getNodeKey());
     beginRemoveRows(parentNode->getModelIndex(), parentNode->getChildrenNodes().count() - 1, parentNode->getChildrenNodes().count() - 1);
     parentNode->removeChildNode(node);
-    _nodesMap.remove(node->getNodeKey());
     endRemoveRows();
+    node->deleteLater();
     return removeKeyList;
 }
 
