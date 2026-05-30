@@ -96,9 +96,6 @@ Linux为QT5.15以上)，推荐版本为QT5.15.2和QT6.6.2；
 | ElaStatusBar           | 状态栏          |                            |
 | ElaExponentialBlur     | 指数模糊         |                            |
 | ElaText                | Text文本       |                            |
-| ElaGraphicsScene       | 高级场景         | 大量实用API                    |
-| ElaGraphicsView        | 高级视图         | 按键缩放、拖动                    |
-| ElaGraphicsItem        | 高级图元         | 大量实用API                    |
 | ElaWindow              | 带导航栏的无边框窗口   |                            |
 | ElaWidget              | 无边框模态窗口      |                            |
 
