@@ -317,7 +317,7 @@ void ElaToolBarStyle::_drawIcon(QPainter* painter, QRectF iconRect, const QStyle
     }
 }
 
-void ElaToolBarStyle::_drawText(QPainter* painter, QRect contentRect, const QStyleOptionToolButton* bopt) const
+void ElaToolBarStyle::_drawText(QPainter* painter, const QRect& contentRect, const QStyleOptionToolButton* bopt) const
 {
     if (!bopt->text.isEmpty())
     {

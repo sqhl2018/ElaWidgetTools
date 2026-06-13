@@ -41,14 +41,14 @@ ElaKeyBinder::~ElaKeyBinder()
 {
 }
 
-void ElaKeyBinder::setBinderKeyText(QString binderKeyText)
+void ElaKeyBinder::setBinderKeyText(const QString& binderKeyText)
 {
     Q_D(ElaKeyBinder);
     d->_binderContainer->setBinderKeyText(binderKeyText);
     setText(u8"  按键: " + binderKeyText + "      ");
 }
 
-QString ElaKeyBinder::getBinderKeyText() const
+const QString& ElaKeyBinder::getBinderKeyText() const
 {
     Q_D(const ElaKeyBinder);
     return d->_binderContainer->getBinderKeyText();

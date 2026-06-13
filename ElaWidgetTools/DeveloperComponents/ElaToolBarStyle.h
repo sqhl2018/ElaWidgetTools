@@ -21,7 +21,7 @@ private:
     ElaThemeType::ThemeMode _themeMode;
     void _drawIndicator(QPainter* painter, const QStyleOptionToolButton* bopt, const QWidget* widget) const;
     void _drawIcon(QPainter* painter, QRectF iconRect, const QStyleOptionToolButton* bopt, const QWidget* widget) const;
-    void _drawText(QPainter* painter, QRect contentRect, const QStyleOptionToolButton* bopt) const;
+    void _drawText(QPainter* painter, const QRect& contentRect, const QStyleOptionToolButton* bopt) const;
 };
 
 #endif // ELATOOLBARSTYLE_H

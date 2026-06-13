@@ -140,19 +140,19 @@ void ElaContentDialog::setCentralWidget(QWidget* centralWidget)
     d->_mainLayout->addWidget(d->_buttonWidget);
 }
 
-void ElaContentDialog::setLeftButtonText(QString text)
+void ElaContentDialog::setLeftButtonText(const QString& text)
 {
     Q_D(ElaContentDialog);
     d->_leftButton->setText(text);
 }
 
-void ElaContentDialog::setMiddleButtonText(QString text)
+void ElaContentDialog::setMiddleButtonText(const QString& text)
 {
     Q_D(ElaContentDialog);
     d->_middleButton->setText(text);
 }
 
-void ElaContentDialog::setRightButtonText(QString text)
+void ElaContentDialog::setRightButtonText(const QString& text)
 {
     Q_D(ElaContentDialog);
     d->_rightButton->setText(text);

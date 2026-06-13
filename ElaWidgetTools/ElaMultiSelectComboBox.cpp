@@ -81,7 +81,7 @@ ElaMultiSelectComboBox::~ElaMultiSelectComboBox()
     delete d->_comboBoxStyle;
 }
 
-void ElaMultiSelectComboBox::setCurrentSelection(QString selection)
+void ElaMultiSelectComboBox::setCurrentSelection(const QString& selection)
 {
     Q_D(ElaMultiSelectComboBox);
     d->_itemSelection.fill(false);
@@ -98,7 +98,7 @@ void ElaMultiSelectComboBox::setCurrentSelection(QString selection)
     d->_refreshCurrentIndexs();
 }
 
-void ElaMultiSelectComboBox::setCurrentSelection(QStringList selection)
+void ElaMultiSelectComboBox::setCurrentSelection(const QStringList& selection)
 {
     Q_D(ElaMultiSelectComboBox);
     d->_comboView->selectionModel()->clearSelection();
@@ -148,7 +148,7 @@ void ElaMultiSelectComboBox::setCurrentSelection(QList<int> selectionIndex)
     d->_refreshCurrentIndexs();
 }
 
-QStringList ElaMultiSelectComboBox::getCurrentSelection() const
+const QStringList& ElaMultiSelectComboBox::getCurrentSelection() const
 {
     return d_ptr->_selectedTextList;
 }

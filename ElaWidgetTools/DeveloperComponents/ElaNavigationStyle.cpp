@@ -341,7 +341,7 @@ QSize ElaNavigationStyle::sizeFromContents(ContentsType type, const QStyleOption
     return QProxyStyle::sizeFromContents(type, option, size, widget);
 }
 
-void ElaNavigationStyle::navigationNodeStateChange(QVariantMap data)
+void ElaNavigationStyle::navigationNodeStateChange(const QVariantMap& data)
 {
     if (data.contains("Expand"))
     {

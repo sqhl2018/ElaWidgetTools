@@ -15,7 +15,7 @@ class ElaPlainTextEditPrivate : public QObject
 public:
     explicit ElaPlainTextEditPrivate(QObject* parent = nullptr);
     ~ElaPlainTextEditPrivate() override;
-    Q_INVOKABLE void onWMWindowClickedEvent(QVariantMap data);
+    Q_INVOKABLE void onWMWindowClickedEvent(const QVariantMap& data);
     Q_SLOT void onThemeChanged(ElaThemeType::ThemeMode themeMode);
 
 private:

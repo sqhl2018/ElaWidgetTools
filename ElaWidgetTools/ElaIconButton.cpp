@@ -10,14 +10,14 @@
 #include "private/ElaIconButtonPrivate.h"
 Q_PROPERTY_CREATE_Q_CPP(ElaIconButton, int, BorderRadius)
 Q_PROPERTY_CREATE_Q_CPP(ElaIconButton, qreal, Opacity);
-Q_PROPERTY_CREATE_Q_CPP(ElaIconButton, QColor, LightHoverColor);
-Q_PROPERTY_CREATE_Q_CPP(ElaIconButton, QColor, DarkHoverColor);
-Q_PROPERTY_CREATE_Q_CPP(ElaIconButton, QColor, LightIconColor);
-Q_PROPERTY_CREATE_Q_CPP(ElaIconButton, QColor, DarkIconColor);
-Q_PROPERTY_CREATE_Q_CPP(ElaIconButton, QColor, LightHoverIconColor);
-Q_PROPERTY_CREATE_Q_CPP(ElaIconButton, QColor, DarkHoverIconColor);
+Q_PROPERTY_REF_CREATE_Q_CPP(ElaIconButton, QColor, LightHoverColor);
+Q_PROPERTY_REF_CREATE_Q_CPP(ElaIconButton, QColor, DarkHoverColor);
+Q_PROPERTY_REF_CREATE_Q_CPP(ElaIconButton, QColor, LightIconColor);
+Q_PROPERTY_REF_CREATE_Q_CPP(ElaIconButton, QColor, DarkIconColor);
+Q_PROPERTY_REF_CREATE_Q_CPP(ElaIconButton, QColor, LightHoverIconColor);
+Q_PROPERTY_REF_CREATE_Q_CPP(ElaIconButton, QColor, DarkHoverIconColor);
 Q_PROPERTY_CREATE_Q_CPP(ElaIconButton, bool, IsSelected);
-ElaIconButton::ElaIconButton(QPixmap pix, QWidget* parent)
+ElaIconButton::ElaIconButton(const QPixmap& pix, QWidget* parent)
     : QPushButton(parent), d_ptr(new ElaIconButtonPrivate())
 {
     Q_D(ElaIconButton);
@@ -146,7 +146,7 @@ ElaIconType::IconName ElaIconButton::getAwesome() const
     return this->d_ptr->_pAwesome;
 }
 
-void ElaIconButton::setPixmap(QPixmap pix)
+void ElaIconButton::setPixmap(const QPixmap& pix)
 {
     Q_D(ElaIconButton);
     d->_iconPix = pix.copy();

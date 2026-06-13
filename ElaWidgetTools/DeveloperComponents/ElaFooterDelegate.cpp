@@ -73,7 +73,7 @@ ElaFooterDelegate::~ElaFooterDelegate()
 {
 }
 
-void ElaFooterDelegate::navigationNodeStateChange(QVariantMap data)
+void ElaFooterDelegate::navigationNodeStateChange(const QVariantMap& data)
 {
     if (data.contains("SelectMarkChanged"))
     {

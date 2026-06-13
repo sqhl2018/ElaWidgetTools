@@ -12,8 +12,8 @@ class ElaSuggestion : public QObject
 {
     Q_OBJECT
     Q_PROPERTY_CREATE(ElaIconType::IconName, ElaIcon)
-    Q_PROPERTY_CREATE(QString, SuggestText)
-    Q_PROPERTY_CREATE(QString, SuggestKey)
+    Q_PROPERTY_REF_CREATE(QString, SuggestText)
+    Q_PROPERTY_REF_CREATE(QString, SuggestKey)
     Q_PROPERTY_CREATE(QVariantMap, SuggestData)
 public:
     explicit ElaSuggestion(QObject* parent = nullptr);
@@ -55,7 +55,7 @@ private:
     QSize _lastSize;
     bool _isExpandAnimationFinished{true};
     bool _isCloseAnimationFinished{true};
-    void _startSizeAnimation(QSize oldSize, QSize newSize);
+    void _startSizeAnimation(const QSize& oldSize, const QSize& newSize);
     void _startExpandAnimation();
     void _startCloseAnimation();
 };

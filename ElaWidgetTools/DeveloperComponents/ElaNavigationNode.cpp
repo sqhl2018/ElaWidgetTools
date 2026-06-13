@@ -27,7 +27,7 @@ ElaNavigationNode::~ElaNavigationNode()
     }
 }
 
-QString ElaNavigationNode::getNodeKey() const
+const QString& ElaNavigationNode::getNodeKey() const
 {
     return _nodeKey;
 }
