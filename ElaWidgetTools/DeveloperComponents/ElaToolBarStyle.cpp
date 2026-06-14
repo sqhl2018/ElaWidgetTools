@@ -261,7 +261,7 @@ void ElaToolBarStyle::_drawIcon(QPainter* painter, QRectF iconRect, const QStyle
                 case Qt::ToolButtonIconOnly:
                 case Qt::ToolButtonTextBesideIcon:
                 {
-                    painter->drawPixmap(QRect(QPoint(iconRect.x(), iconRect.center().y() - iconSize.height() / 2), iconSize), iconPix);
+                    painter->drawPixmap(QRect(QPoint(iconRect.center().x() - iconSize.width() / 2.0, iconRect.center().y() - iconSize.height() / 2.0), iconSize), iconPix);
                     break;
                 }
                 case Qt::ToolButtonTextUnderIcon:
