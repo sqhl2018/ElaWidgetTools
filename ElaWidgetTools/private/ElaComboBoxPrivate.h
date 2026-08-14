@@ -1,9 +1,9 @@
-#ifndef ELACOMBOBOXPRIVATE_H
-#define ELACOMBOBOXPRIVATE_H
+#ifndef ELAWORKSPACE_ELAWIDGETTOOLS_PRIVATE_ELACOMBOBOXPRIVATE_H_
+#define ELAWORKSPACE_ELAWIDGETTOOLS_PRIVATE_ELACOMBOBOXPRIVATE_H_
 
 #include <QObject>
 
-#include "ElaDef.h"
+#include "ElaWidgetToolsDef.h"
 
 class QLineEdit;
 class ElaComboBox;
@@ -26,4 +26,5 @@ private:
     ElaThemeType::ThemeMode _themeMode;
 };
 
-#endif // ELACOMBOBOXPRIVATE_H
+#endif // ELAWORKSPACE_ELAWIDGETTOOLS_PRIVATE_ELACOMBOBOXPRIVATE_H_
+
