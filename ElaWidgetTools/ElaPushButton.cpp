@@ -1,5 +1,6 @@
 #include "ElaPushButton.h"
 
+#include "ElaApplication.h"
 #include <QPainter>
 #include <QPainterPath>
 
@@ -30,7 +31,7 @@ ElaPushButton::ElaPushButton(QWidget* parent)
     setMouseTracking(true);
     setFixedHeight(38);
     QFont font = this->font();
-    font.setPixelSize(15);
+    font.setPixelSize(eApp->getFontPixelSize() + 2);
     setFont(font);
     setObjectName("ElaPushButton");
     setStyleSheet("#ElaPushButton{background-color:transparent;}");

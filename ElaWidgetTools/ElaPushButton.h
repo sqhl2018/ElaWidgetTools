@@ -1,9 +1,10 @@
-#ifndef ELAPUSHBUTTON_H
-#define ELAPUSHBUTTON_H
+#ifndef ELAWORKSPACE_ELAWIDGETTOOLS_ELAPUSHBUTTON_H_
+#define ELAWORKSPACE_ELAWIDGETTOOLS_ELAPUSHBUTTON_H_
 
 #include <QPushButton>
 
-#include "ElaProperty.h"
+#include "ElaWidgetToolsExport.h"
+#include "ElaPropertyMacro.h"
 class ElaPushButtonPrivate;
 class ELA_EXPORT ElaPushButton : public QPushButton
 {
@@ -33,4 +34,4 @@ protected:
     virtual void paintEvent(QPaintEvent* event) override;
 };
 
-#endif // ELAPUSHBUTTON_H
+#endif // ELAWORKSPACE_ELAWIDGETTOOLS_ELAPUSHBUTTON_H_
